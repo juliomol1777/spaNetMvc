@@ -1,0 +1,10 @@
+C:\Users\Julio\Desktop\ProyectoFinal\BlogDatabase\bin\Debug\BlogDatabase.dacpac
+C:\Users\Julio\Desktop\ProyectoFinal\BlogDatabase\bin\Debug\BlogDatabase.dll
+C:\Users\Julio\Desktop\ProyectoFinal\BlogDatabase\bin\Debug\BlogDatabase.pdb
+C:\Users\Julio\Desktop\ProyectoFinal\BlogDatabase\obj\Debug\BlogDatabase.sqlproj.AssemblyReference.cache
+C:\Users\Julio\Desktop\ProyectoFinal\BlogDatabase\obj\Debug\Model.xml
+C:\Users\Julio\Desktop\ProyectoFinal\BlogDatabase\obj\Debug\refactor.xml
+C:\Users\Julio\Desktop\ProyectoFinal\BlogDatabase\obj\Debug\postdeploy.sql
+C:\Users\Julio\Desktop\ProyectoFinal\BlogDatabase\obj\Debug\predeploy.sql
+C:\Users\Julio\Desktop\ProyectoFinal\BlogDatabase\obj\Debug\BlogDatabase.dll
+C:\Users\Julio\Desktop\ProyectoFinal\BlogDatabase\obj\Debug\BlogDatabase.pdb

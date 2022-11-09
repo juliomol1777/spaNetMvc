@@ -1,0 +1,66 @@
+creo proyecto asp net core api mvc
+descargo un template de startboostrap y lo agrego en una carpeta al proyecto
+reemplazo en wwwroot, los archivos css, js y los 4 html del template
+pego la carpeta assets dentro de wwwroot
+en view>shared>layout van las partes del codigo html que comparten varias vistas (ej. footer, navbar)
+copio todo el contenido del index.html y lo pego en el achivo layout
+pongo el path ~/ para que busques los archivos en la raiz del proyecto wwwwroot, ej los archivos de css en el html
+en layout dejo header, footer y el renderBody que es donde va a ir el contenido de cada view
+en view>home creo los view que se renderizaran en la parte donde puse el @RenderBody
+Index, AcercaDe, Suerte, Contacto son las view
+en cada view uso las ViewData para poner el titulo, subtitulo, url del banner,
+y el contenido html que tiene esa view
+en la carpeta Models creo la clase Publicacion con los atributos de la entidad que tendra la view suerte
+creo las reglas de ese nodelo Publicacion , para eso creo la Carpeta rules y dentro la clase PublicacionRule
+Agrego al HomeController, en el metodo Suerte que determina lo que se muestra en esa view, instancio la clase PublicacionRule
+y creo un objeto con los atributos de la entidad Publicacion que vienen del metodo de la clase PublicacionRule
+uso @model Publicacion , para usar los atributos del objeto model en el view Suerte
+---------------------------------------------------------------------------------------
+
+creo base de datos, antes en la solucion del proyecto(carpeta que contiene al proyecto mvc)
+agrego un proyecto nuevo de base de datos. voy a tener 2 proyectos dentro de la carpeta
+creo la tabla publicacion, obtengo el codigo sql para generarla, esto lo hago microsoft sql server management
+en el proyecto de base de datos, creo una tabla y al seleccionarla en la ventana pego el codigo sql y genero la tabla
+asi es mas comodo por la primary key, tambien se podria hacer la tabla desde el visual estudio
+dentro del proyecto base de datos, en la tabla creada
+instalo dapper, en la carpeta dependencias, btn derecho nuget, busco dapper
+dapper es un frameworks como entity para manejar consultas a la base de datos
+modifico el archivo PublicacionRules de la carpeta Rules para traer datos de la bd con dapper
+para el connectionString busco el nombre del servidor en el microsoft server management studio
+
+copio el appsetings y lo renombro para tener la configuracion de mi usuario, ahi pongo el string de conexion con server sql
+luego voy al program.cs y agrego configuracion, configuro el homeController inyectando el IConfiguration, En el archivo publicacionRules creo un constructor y le paso el _configuration, creo una instancia de publicacionRule y le paso el _configuration
+
+-----------------------------------------------------------------------
+trabajo con el home, cargo post en la base de datos para mostrarlos en la home. Voy al publicacionRule y creo el metodo
+para esto (GetPostToHome) el metodo retorna una lista con todos los post traidos de la bd
+luego uso el metodo creado en el homecontroller, dentro del metodo Index(), ahi lo mando a la vista view(posts)
+en la vista index.cshtml lo recibo y lo uso
+uso <a asp-action="post" asp-controller="home" asp-route-id =@item.Id>,  para redireccionar a cada post, el asp-route-id indica la propiedad que voy a enviar o sea el id
+ en el template original estaba href, y se usaba pponiendo la redireccion /Post/{item.Id} donde id es el id de la base de datos de ese post
+y me redirecciona a una pagina con esa url.
+Creo en el controler la vista de post, para mostrar cada post redireccionado, luego creo el metodo getPostById en el publicacionrule 
+creo la vista de post, Post.cshtml
+
+-------------------------------
+sql server
+uso como nombre del servidor a localhost y como usuario "SA" sqlcmd -S localhost -U "SA"
+password: JulioMol1777#
+-------------------------------
+
+INSERT INTO [dbo].[Publicacion]
+           ([Titulo]
+           ,[SubTitulo]
+           ,[Creador]
+           ,[Cuerpo]
+           ,[Creacion]
+           ,[Imagen])
+     VALUES
+           ('Man must explore, and this is'
+           ,'Problems look mighty small from 150'
+           ,'Julio'
+           ,'Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airmans earth, if free men make it, will be truly round: a globe in practice, not in theory.'
+           ,'20221105'
+           ,'/assets/img/post-sample-image.jpg')
+GO
+-------------------------------------------------------------------------------------------
