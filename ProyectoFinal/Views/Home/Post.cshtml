@@ -1,9 +1,11 @@
 @model Publicacion
 @{
-    ViewData["Title"] = "Voy a tener suerte";
+    ViewData["Title"] = "Post";
     ViewData["TitleHeader"] = Model.Titulo;
     ViewData["imagen"] = "/assets/img/post-bg.jpg";
     ViewData["SubTitleHeader"] = Model.SubTitulo;
+    ViewData["Creador"] = Model.Creador;
+    ViewData["Creacion"] = Model.Creacion.ToLongDateString();
 }
 <article class="mb-4">
             <div class="container px-4 px-lg-5">

@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/julio/Escritorio/ProyectosNet/ProyectoFinal/ProyectoFinal/ProyectoFinal.csproj": {}
+    "C:\\Users\\Julio\\Desktop\\ProyectosNet\\ProyectoFinal\\ProyectoFinal\\ProyectoFinal.csproj": {}
   },
   "projects": {
-    "/home/julio/Escritorio/ProyectosNet/ProyectoFinal/ProyectoFinal/ProyectoFinal.csproj": {
+    "C:\\Users\\Julio\\Desktop\\ProyectosNet\\ProyectoFinal\\ProyectoFinal\\ProyectoFinal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/julio/Escritorio/ProyectosNet/ProyectoFinal/ProyectoFinal/ProyectoFinal.csproj",
+        "projectUniqueName": "C:\\Users\\Julio\\Desktop\\ProyectosNet\\ProyectoFinal\\ProyectoFinal\\ProyectoFinal.csproj",
         "projectName": "ProyectoFinal",
-        "projectPath": "/home/julio/Escritorio/ProyectosNet/ProyectoFinal/ProyectoFinal/ProyectoFinal.csproj",
-        "packagesPath": "/home/julio/.nuget/packages/",
-        "outputPath": "/home/julio/Escritorio/ProyectosNet/ProyectoFinal/ProyectoFinal/obj/",
+        "projectPath": "C:\\Users\\Julio\\Desktop\\ProyectosNet\\ProyectoFinal\\ProyectoFinal\\ProyectoFinal.csproj",
+        "packagesPath": "C:\\Users\\Julio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Julio\\Desktop\\ProyectosNet\\ProyectoFinal\\ProyectoFinal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/julio/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Julio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -41,6 +43,36 @@
             "Dapper": {
               "target": "Package",
               "version": "[2.0.123, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[3.4.2, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.10, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
@@ -65,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

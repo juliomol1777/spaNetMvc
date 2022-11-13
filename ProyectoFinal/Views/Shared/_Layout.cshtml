@@ -42,6 +42,14 @@
                         <div class="site-heading">
                             <h1>@ViewData["TitleHeader"]</h1>
                             <span class="subheading">@ViewData["SubTitleHeader"]</span>
+                            @{
+                               if (ViewData["Creador"] != null)
+                               {
+                                  @Html.Raw($"<span class='post-meta'> Posted by {@ViewData["Creador"]} on {@ViewData["Creacion"]} </span>") 
+                               } 
+                            }
+                            
+
                         </div>
                     </div>
                 </div>

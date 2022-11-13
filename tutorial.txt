@@ -42,7 +42,35 @@ y me redirecciona a una pagina con esa url.
 Creo en el controler la vista de post, para mostrar cada post redireccionado, luego creo el metodo getPostById en el publicacionrule 
 creo la vista de post, Post.cshtml
 
+--------------------------------------
+cambio en el metodo GetOnePostRandom() para que me traiga un post aleatorio al dar click a la pestaña
+voy a tener suerte. para eso agrego al query ORDER BY NEWID()
+
 -------------------------------
+trabajo en la vista contacto, me creo un model llamado Contacto con las propiedades Nombre, Email, etc y
+ un partial(el <partial> me permite meter parte de una vista html dentro de otro html, como si fuera un componente)
+ con el formulario en view/home _FormContacto.cshtml
+en el homeController agrego un httpPost de Contacto para enviar datos del form contacto
+para enviar correos desde el form debo instalar un paquete de nugget llamado MailKit, en VS code esto
+se hace desde la terminal con  dotnet add package MailKit
+creo la logica del contacto en ContactoRule
+en appsettings.julio defino los parametros del correo ("Email") que se enviara 
+
+-------------------------------------------------------
+
+hago login y registro, para eso uso las librerias que tiene .net donde brinda logica e interfaz de usuario
+intalo Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
+Microsoft.AspNetCore.Identity.EntityFrameworkCore
+Microsoft.AspNetCore.Identity.UI
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+
+agrego configuracion en el program.cs
+agrego el string de coneccion(defaultconnection) el el archivo appsettings.julio.json
+pego dentro de data la carpeta migrations y los archivos que contiene, eso es codigo autogenerado
+por net
+
+--------------------------------------------------------
 sql server
 uso como nombre del servidor a localhost y como usuario "SA" sqlcmd -S localhost -U "SA"
 password: JulioMol1777#

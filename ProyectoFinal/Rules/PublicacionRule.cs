@@ -19,7 +19,7 @@ namespace ProyectoFinal.Rules
             using var connection = new SqlConnection(connectionString);
             {
                 connection.Open();
-                var post = connection.Query<Publicacion>("SELECT TOP 1 * FROM Publicacion");
+                var post = connection.Query<Publicacion>("SELECT TOP 1 * FROM Publicacion ORDER BY NEWID()");
                 return post.First();
             }
             /*var post = new Publicacion
