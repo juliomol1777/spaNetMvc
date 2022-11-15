@@ -58,5 +58,27 @@ namespace ProyectoFinal.Rules
                 return post;
             }
         }
+
+        public void InserPost(Publicacion data)
+        {
+            var connectionString = _configuration.GetConnectionString("BlogDatabase");
+            //var connectionString = @"Server= .\SQLEXPRESS; Database = BlogDatabase; Trusted_Connection=true ";
+            using var connection = new SqlConnection(connectionString);
+            {
+                connection.Open();
+                var queryInsert = "INSERT INTO Publicacion(Titulo, Subtitulo, Creador, Cuerpo, Creacion, Imagen) Values(@titulo, @subtitulo, @creador, @cuerpo, @creacion, @imagen)";
+                var result = connection.Execute(queryInsert, new
+                {
+                    titulo = data.Titulo,
+                    subtitulo = data.SubTitulo,
+                    creador = data.Creador,
+                    cuerpo = data.Cuerpo,
+                    creacion = data.Creacion,
+                    imagen = data.Imagen
+                });
+
+            }
+               
+        }
     }
 }

@@ -3294,26 +3294,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Julio\\.nuget\\packages\\": {}
+    "/home/julio/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Julio\\Desktop\\ProyectosNet\\ProyectoFinal\\ProyectoFinal\\ProyectoFinal.csproj",
+      "projectUniqueName": "/home/julio/Escritorio/ProyectosNet/ProyectoFinal/ProyectoFinal/ProyectoFinal.csproj",
       "projectName": "ProyectoFinal",
-      "projectPath": "C:\\Users\\Julio\\Desktop\\ProyectosNet\\ProyectoFinal\\ProyectoFinal\\ProyectoFinal.csproj",
-      "packagesPath": "C:\\Users\\Julio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Julio\\Desktop\\ProyectosNet\\ProyectoFinal\\ProyectoFinal\\obj\\",
+      "projectPath": "/home/julio/Escritorio/ProyectosNet/ProyectoFinal/ProyectoFinal/ProyectoFinal.csproj",
+      "packagesPath": "/home/julio/.nuget/packages/",
+      "outputPath": "/home/julio/Escritorio/ProyectosNet/ProyectoFinal/ProyectoFinal/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Julio\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/julio/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3389,7 +3387,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
       }
     }
   }

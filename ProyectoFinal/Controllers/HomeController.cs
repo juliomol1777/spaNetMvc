@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using ProyectoFinal.Models;
 using ProyectoFinal.Rules;
 using System.Diagnostics;
@@ -50,6 +51,19 @@ namespace ProyectoFinal.Controllers
         public IActionResult Contacto()
         {
             return View();
+        }
+
+        [Authorize]
+        public IActionResult Nuevo()
+        {
+            return View();
+        }
+
+        public IActionResult Add(Publicacion data)
+        {
+            var rule= new PublicacionRule(_configuration);
+            rule.InserPost(data);
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
