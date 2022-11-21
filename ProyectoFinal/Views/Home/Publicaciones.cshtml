@@ -1,0 +1,40 @@
+@model List<Publicacion>
+@{
+    ViewData["Title"] = "Inicio";
+    ViewData["Image"] = "/assets/img/home-bg.jpg";
+    ViewData["TitleHeader"] = "Blog Polo MC";
+    ViewData["SubTitleHeader"] = "Bienvenido al mejor blog que se pudo crear";
+}
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+
+            @foreach (var item in Model)
+            {
+                <!-- Post preview-->
+                <div class="post-preview">
+                    <a asp-action="post" asp-controller="home" asp-route-id=@item.Id>
+                        <h2 class="post-title">@item.Titulo</h2>
+                        <h3 class="post-subtitle">@item.SubTitulo</h3>
+                    </a>
+                    <p class="post-meta">
+                        Posted by
+                        <a href="#!">@item.Creador</a>
+                        on @item.Creacion.ToLongDateString();
+                    </p>
+                </div>
+                <!-- Divider-->
+                <hr class="my-4" />
+            }           
+            <div class="d-flex justify-content-end mb-4">
+                <!--
+                    PROXIMA CLASE AGREGAR SELECTOR DE CANTIDAD DE POST A VER Y ENVIARLO EN ASP-ROUTE-CANT
+                    AGREGAR BOTON PARA VOLVER PAGINA ANTERIOR (SOLO CUANDO NO ESTÉ EN LA PRIMERA PAGINA)
+                    EN LA ULTIMA PAGINA NO MOSTRAR BOTON "NEXT 5 POST"
+                    NUMERO 5 EN BOTON DEBE SER DINAMICO SEGUN VALOR DE CANT 
+                -->
+                <a class="btn btn-primary text-uppercase" asp-action="publicaciones" asp-controller="home" asp-route-pagina=1>Next 5 Posts →</a>
+            </div>
+        </div>
+    </div>
+</div>
